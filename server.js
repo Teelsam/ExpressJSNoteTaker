@@ -14,7 +14,7 @@ app.use(express.static('public'));
 //all requests beginning in /api go to index.js
 app.use('/api', api);
 //GET route to homepage
-app.get('/notes', (req, res) =>
+app.get('/', (req, res) =>
     res.sendFile(path.join(__dirname, '/public/index.html')));
 //GET route for notes page
 app.get('/notes', (req, res) =>
